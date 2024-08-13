@@ -70,12 +70,14 @@ function checkMachedBlock(firstBlock, secondBlock) {
     secondBlock.classList.remove("is-flipped");
     firstBlock.classList.add("has-mach");
     secondBlock.classList.add("has-mach");
+    document.getElementById("success").play();
   } else {
     triesElement.innerHTML = parseInt(triesElement.innerHTML) + 1;
     setTimeout(() => {
       firstBlock.classList.remove("is-flipped");
       secondBlock.classList.remove("is-flipped");
     }, duration);
+    document.getElementById("wrong").play();
   }
 }
 
